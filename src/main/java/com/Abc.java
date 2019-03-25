@@ -15,7 +15,7 @@ public class Abc {
             catch (InterruptedException e) {
                 System.out.print(e);
             }
-            System.out.println("hello");
+            System.out.println("congratulations! xiao shi jie");
         }
     }
 }
