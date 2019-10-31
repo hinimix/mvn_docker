@@ -31,9 +31,14 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.13</version>
                 <configuration>
+	            <forceTags>True</forceTags>
                     <imageName>hinimix-repository:${project.name}</imageName>
                     <baseImage>hinimix/jdk11:latest</baseImage>
 		    <entryPoint>java -jar /data/${project.build.finalName}.jar</entryPoint>
+		    <imageTags>
+			    <imageTag>${project.version}</imageTag>
+			    <imageTag>latest</imageTag>
+		    </imageTags>
                     <resources>
                         <resource>
                             <targetPath>/data</targetPath>
